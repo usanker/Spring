@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+
+	<context:annotation-config/>
+	
+	<bean id = "helloWorld" class = "com.springProject.HelloWorld">
+      <property name = "message" value = "Hello World!"/>
+   </bean>
+   
+   <bean id = "helloWorld2" class = "com.springProject.HelloWorld2">
+<!--       <property name = "message" value = "Hello World!"/> -->
+   </bean>
+   
+   <bean id = "m" class = "com.springProject.Message">
+	 <constructor-arg type = "java.lang.String" value = "HelloWorld2"/>
+   </bean>
+   
+   <bean id = "message" class = "com.springProject.Message">
+	 <constructor-arg type = "java.lang.String" value = "HelloWorld2_2"/>
+   </bean>
+   
+   <bean id = "messageH2" class = "com.springProject.Message">
+	 <constructor-arg type = "java.lang.String" value = "HelloWorld Mesage H2"/>
+   </bean>
+   
+   <bean id = "name" class = "com.springProject.Name">
+	 <constructor-arg type = "java.lang.String" value = "Name of HelloWord2"/>
+   </bean>
+<!--    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"> -->
+<!--    </bean> -->
+</beans>
